@@ -1,0 +1,27 @@
+<mvc:View controllerName="testingtesting.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:t="sap.ui.table">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<t:Table id="attachmentsTable" rows="{path:'/'}" title="Customer" selectionMode="MultiToggle" visibleRowCount="7">
+						<t:columns>
+							<t:Column width="11rem">
+								<Label text="Product Name"/>
+								<t:template>
+									<Text text="{CustomerID}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+								<Label text="Product Id"/>
+								<t:template>
+									<Input value="{CompanyName}"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

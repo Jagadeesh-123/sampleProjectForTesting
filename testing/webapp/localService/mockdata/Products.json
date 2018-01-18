@@ -1,0 +1,301 @@
+[{
+	"ProductID": 6944,
+	"ProductName": "ProductName 1",
+	"SupplierID": 7683,
+	"CategoryID": 102,
+	"QuantityPerUnit": "QuantityPerUnit 1",
+	"UnitPrice": 7575.21,
+	"UnitsInStock": 7005,
+	"UnitsOnOrder": 9991,
+	"ReorderLevel": 1442,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(6944)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(6944)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(6944)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(6944)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 3908,
+	"ProductName": "ProductName 2",
+	"SupplierID": 8439,
+	"CategoryID": 819,
+	"QuantityPerUnit": "QuantityPerUnit 2",
+	"UnitPrice": 2009.57,
+	"UnitsInStock": 8778,
+	"UnitsOnOrder": 8136,
+	"ReorderLevel": 8742,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(3908)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(3908)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(3908)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(3908)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 5112,
+	"ProductName": "ProductName 3",
+	"SupplierID": 9822,
+	"CategoryID": 9994,
+	"QuantityPerUnit": "QuantityPerUnit 3",
+	"UnitPrice": 5149.28,
+	"UnitsInStock": 4311,
+	"UnitsOnOrder": 250,
+	"ReorderLevel": 9957,
+	"Discontinued": true,
+	"__metadata": {
+		"uri": "Products(5112)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(5112)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(5112)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(5112)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 962,
+	"ProductName": "ProductName 4",
+	"SupplierID": 8309,
+	"CategoryID": 7148,
+	"QuantityPerUnit": "QuantityPerUnit 4",
+	"UnitPrice": 4814.11,
+	"UnitsInStock": 8282,
+	"UnitsOnOrder": 2309,
+	"ReorderLevel": 2537,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(962)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(962)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(962)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(962)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 8038,
+	"ProductName": "ProductName 5",
+	"SupplierID": 4856,
+	"CategoryID": 7782,
+	"QuantityPerUnit": "QuantityPerUnit 5",
+	"UnitPrice": 9263.2,
+	"UnitsInStock": 6905,
+	"UnitsOnOrder": 1241,
+	"ReorderLevel": 3155,
+	"Discontinued": true,
+	"__metadata": {
+		"uri": "Products(8038)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(8038)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(8038)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(8038)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 5809,
+	"ProductName": "ProductName 6",
+	"SupplierID": 2744,
+	"CategoryID": 3035,
+	"QuantityPerUnit": "QuantityPerUnit 6",
+	"UnitPrice": 9820.41,
+	"UnitsInStock": 4389,
+	"UnitsOnOrder": 5147,
+	"ReorderLevel": 9127,
+	"Discontinued": true,
+	"__metadata": {
+		"uri": "Products(5809)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(5809)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(5809)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(5809)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 464,
+	"ProductName": "ProductName 7",
+	"SupplierID": 2255,
+	"CategoryID": 5129,
+	"QuantityPerUnit": "QuantityPerUnit 7",
+	"UnitPrice": 5492.73,
+	"UnitsInStock": 1306,
+	"UnitsOnOrder": 4389,
+	"ReorderLevel": 8048,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(464)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(464)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(464)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(464)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 4544,
+	"ProductName": "ProductName 8",
+	"SupplierID": 8236,
+	"CategoryID": 3162,
+	"QuantityPerUnit": "QuantityPerUnit 8",
+	"UnitPrice": 9373.53,
+	"UnitsInStock": 800,
+	"UnitsOnOrder": 8278,
+	"ReorderLevel": 7998,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(4544)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(4544)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(4544)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(4544)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 3104,
+	"ProductName": "ProductName 9",
+	"SupplierID": 432,
+	"CategoryID": 5055,
+	"QuantityPerUnit": "QuantityPerUnit 9",
+	"UnitPrice": 3004.74,
+	"UnitsInStock": 2629,
+	"UnitsOnOrder": 3777,
+	"ReorderLevel": 9303,
+	"Discontinued": true,
+	"__metadata": {
+		"uri": "Products(3104)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(3104)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(3104)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(3104)/Supplier"
+		}
+	}
+}, {
+	"ProductID": 5225,
+	"ProductName": "ProductName 10",
+	"SupplierID": 927,
+	"CategoryID": 9130,
+	"QuantityPerUnit": "QuantityPerUnit 10",
+	"UnitPrice": 5417.47,
+	"UnitsInStock": 1835,
+	"UnitsOnOrder": 6405,
+	"ReorderLevel": 7351,
+	"Discontinued": false,
+	"__metadata": {
+		"uri": "Products(5225)",
+		"type": "NorthwindModel.Product"
+	},
+	"Category": {
+		"__deferred": {
+			"uri": "Products(5225)/Category"
+		}
+	},
+	"Order_Details": {
+		"__deferred": {
+			"uri": "Products(5225)/Order_Details"
+		}
+	},
+	"Supplier": {
+		"__deferred": {
+			"uri": "Products(5225)/Supplier"
+		}
+	}
+}]
