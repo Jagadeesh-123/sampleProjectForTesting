@@ -1,0 +1,98 @@
+<core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:smartVariantManagement="sap.ui.comp.smartvariants" xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<m:Dialog title="{i18n>matterFilter}" contentWidth="70%" contentHeight="70%" draggable="true">
+		<m:content>
+			<m:Text class="panelText" text="{i18n>dateSelection}"/>
+			<l:Grid defaultSpan="L12 M6 S12" class="gridMarginTop">
+				<l:content>
+					<f:SimpleForm id="SimpleFormDisplay480_12120Dual" editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+						labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+						columnsL="2" columnsM="2" singleContainerFullSize="false">
+						<f:content>
+							<core:Title/>
+							<m:Label text="{i18n>workDateFrom}"/>
+							<m:DatePicker id="fromDateInput" displayFormat="dd.MM.yyyy" valueFormat="yyyy-MM-dd" value="01.01.2014" change="handleChange"
+								app:key="Zzopendate" app:desc="Client Open Date"/>
+							<core:Title/>
+							<m:Label text="{i18n>workDateTo}"/>
+							<m:DatePicker id="toDateInput" displayFormat="dd.MM.yyyy" valueFormat="yyyy-MM-dd" change="handleChange"
+								app:key="Zzopendate" app:desc="Client Open Date"/>
+						</f:content>
+					</f:SimpleForm>
+				</l:content>
+			</l:Grid>
+			<m:Text class="panelText" text="{i18n>clientPartner}"/>
+			<l:Grid defaultSpan="L12 M6 S12" class="gridMarginTop">
+				<l:content>
+					<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+						singleContainerFullSize="true">
+						<f:content>
+							<core:Title/>
+							<m:Label text="{i18n>clientNumber}"/>
+							<m:MultiInput id="clientnumbermultiInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Mcod3" app:desc="Client" app:descKey="Kunnr"/>
+							<m:Label text="{i18n>businessPartnerType}"/>
+							<m:Select width="100%" id="businessPartnerType">
+								<core:Item text=""/>
+								<core:Item text="Bill Approver"/>
+								<core:Item text="Matter Lead Partner"/>
+								<core:Item text="Bill Reviewer"/>
+							</m:Select>
+							<core:Title/>
+							<m:Label text="{i18n>businessPartnerNumber}"/>
+							<m:MultiInput id="businessPartnerNumber" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Pernr" app:desc="Partner Number"/>
+						</f:content>
+					</f:SimpleForm>
+				</l:content>
+			</l:Grid>
+			<m:Text class="panelText" text="{i18n>matterSelection}"/>
+					<l:Grid defaultSpan="L12 M6 S12" class="gridMarginTop">
+						<l:content>
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+								singleContainerFullSize="true">
+								<f:content>
+									<core:Title/>
+									<m:Label text="{i18n>matter}"/>
+									<m:MultiInput id="matterInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Pspid" app:desc="Matter"/>
+									<m:Label text="{i18n>groupBillId}"/>
+									<m:MultiInput id="groupBillIdInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Zzgrpbill" app:desc="Group Bill ID"/>
+									<core:Title/>
+									<m:Label text="{i18n>matterReportingGroup}"/>
+									<m:MultiInput id="matterReportingGroupInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Rptgroup" app:desc="Matter Reporting Group"/>
+								</f:content>
+							</f:SimpleForm>
+						</l:content>
+					</l:Grid>
+					<m:Text class="panelText" text="{i18n>organizationSelection}"/>
+					<l:Grid defaultSpan="L12 M6 S12" class="gridMarginTop">
+						<l:content>
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+								singleContainerFullSize="true">
+								<f:content>
+									<core:Title/>
+									<m:Label text="{i18n>billingOffice}"/>
+									<m:MultiInput id="billingOfficeInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Werks" app:desc="Billing Office"/>
+									<m:Label text="{i18n>draftBillNo}"/>
+									<m:MultiInput id="draftBillNoInput" app:desc="Draft Bill"/>
+									<core:Title/>
+									<m:Label text="{i18n>salesOrg}"/>
+									<m:MultiInput id="salesOrgInput" submit="onSubmit" valueHelpRequest="handleValueHelpRequest" app:key="Bukrs" app:desc="Sales Org"/>
+									<m:Label text="{i18n>finalBillNo}"/>
+									<m:MultiInput id="finalBillNoInput" submit="onSubmit" app:key="Finalbill" app:desc="Final Bill"/>
+								</f:content>
+							</f:SimpleForm>
+						</l:content>
+					</l:Grid>
+		</m:content>
+		<m:beginButton>
+			<m:Button text="{i18n>Cancel}" press="closeMaterFilterDialog"/>
+		</m:beginButton>
+		<m:endButton>
+			<m:Button id="okBtn" text="{i18n>Ok}" press="onConfirmDialog" enabled="false"/>
+		</m:endButton>
+	</m:Dialog>
+</core:FragmentDefinition>

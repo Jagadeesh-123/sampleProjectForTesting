@@ -1,0 +1,182 @@
+{
+	"exportLine": [{
+		"field": "Info",
+		"text": "Info"
+	},{
+		"field": "Abgru",
+		"text": "Rej code"
+	}, {
+		"field": "Zzreview",
+		"text": "Reviewed"
+	}, {
+		"field": "Vbeln",
+		"text": "Draft Bill"
+	}, {
+		"field": "Posnr",
+		"text": "Item"
+	}, {
+		"field": "Zzprtoninv",
+		"text": "Print on Invoice"
+	}, {
+		"field": "Zztranstyp",
+		"text": "Type of Creation"
+	}, {
+		"field": "Taxm1",
+		"text": "Tax Status"
+	}, {
+		"field": "Phase",
+		"text": "Matter Phase"
+	},{
+		"field": "Belnr",
+		"text": "Document No"
+	}, {
+		"field": "Buzei",
+		"text": "Line item"
+	}, {
+		"field": "Zzwerks",
+		"text": "Working Office"
+	}, {
+		"field": "Werks",
+		"text": "Office"
+	}, {
+		"field": "Budat",
+		"text": "Work Date"
+	}, {
+		"field": "Pernr",
+		"text": "Timekeeper No"
+	}, {
+		"field": "Timekeeper",
+		"text": "Timekeeper"
+	}, {
+		"field": "Ptext",
+		"text": "Title"
+	},{
+		"field": "Awtyp",
+		"text": "Trans Type"
+	}, {
+		"field": "Lstar",
+		"text": "Trans Code"
+	}, {
+		"field": "LstarDesc",
+		"text": "Trans Description"
+	}, {
+		"field": "Meinh",
+		"text": "UOM"
+	}, {
+		"field": "Waers",
+		"text": "Currency"
+	}, {
+		"field": "BaseRate",
+		"text": "Base Rate"
+	}, {
+		"field": "ActualRate",
+		"text": "Bill Rate"
+	}, {
+		"field": "BaseValue",
+		"text": "Base Val"
+	},{
+		"field": "ActualValue",
+		"text": "Bill Value"
+	}, {
+		"field": "BaseQty",
+		"text": "Worked Qty"
+	}, {
+		"field": "ActualQty",
+		"text": "Bill Qty"
+	}, {
+		"field": "ZwriteoffAmt",
+		"text": "Write Up/Down"
+	}, {
+		"field": "ZwriteoffQty",
+		"text": "Write Down Qty"
+	}, {
+		"field": "Kzwi6",
+		"text": "VAT on IOB"
+	}, {
+		"field": "Kzwi5",
+		"text": "Fee Markup"
+	}, {
+		"field": "Kzwi4",
+		"text": "Discount"
+	}, {
+		"field": "NetBillValue",
+		"text": "Net Val"
+	}, {
+		"field": "Tax",
+		"text": "Tax amount"
+	}, {
+		"field": "Werks",
+		"text": "Office"
+	}],
+	"exportHeaderEdits": [{
+		"field": "Info",
+		"text": "Info"
+	}, {
+		"field": "Finalbill",
+		"text": "Final Bill"
+	}, {
+		"field": "Draftbill",
+		"text": "Draft Bill"
+	},{
+		"field": "Zzfiscalinv",
+		"text": "Fiscal Invoice Number"
+	}, {
+		"field": "Fkart",
+		"text": "Invoice Type"
+	}, {
+		"field": "Client",
+		"text": "Client Number"
+	},{
+		"field": "ClientName",
+		"text": "Client Name"
+	}, {
+		"field": "Kunrg",
+		"text": "Player"
+	}, {
+		"field": "Pspid",
+		"text": "Matter Number"
+	},{
+		"field": "Post1",
+		"text": "Matter Discription"
+	}, {
+		"field": "Vkorg",
+		"text": "Legal Entity"
+	}, {
+		"field": "Werks",
+		"text": "Billing Office"
+	},{
+		"field": "Rptgroup",
+		"text": "Matter Reporting Group"
+	}, {
+		"field": "Mgbill",
+		"text": "Group Billing ID"
+	}, {
+		"field": "Fkdat",
+		"text": "Billing Date"
+	},{
+		"field": "Erdat",
+		"text": "Created On"
+	}, {
+		"field": "Ernam",
+		"text": "Created By"
+	}, {
+		"field": "Waerk",
+		"text": "Currency"
+	},{
+		"field": "NetFees",
+		"text": "Net Fees"
+	}, {
+		"field": "NetCost",
+		"text": "Net Disbursements"
+	}, {
+		"field": "Tax",
+		"text": "Tax"
+	},{
+		"field": "DiscAmount",
+		"text": "Discount Amount"
+	}, {
+		"field": "NetAmount",
+		"text": "Net Amount"
+	}]
+
+}

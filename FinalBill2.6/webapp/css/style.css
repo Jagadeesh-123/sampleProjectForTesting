@@ -1,0 +1,125 @@
+/* Enter your custom styles here */
+/* Enter your custom styles here */
+.gridMarginTop label {
+    float: right;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.panelText {
+    max-width: 100%;
+    font-size: 17px;
+    color: #008bc7;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top : 10px;
+}
+
+.myListTheme{
+	    background: #c5cee2 !important;
+}
+.sapMRbG {
+    display: inline-block;
+    border-bottom: 2px solid #ccc;
+    padding: 0 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 98% !important;
+}
+label#__label22 {
+    padding-left: 27px;
+    padding-top: 10px;
+}
+.sapMRbG.sapMRbG1Row>.sapMRb {
+    clear: none;
+    padding: 1px;
+    margin-right: 25px;
+}
+.sapUiSizeCompact .sapUiFormContainerTitle>.sapUiFormTitle {
+    height: 2rem;
+    line-height: 2rem;
+    display: none;
+}
+.sapMRbG.sapMRbG1Row>.sapMRb {
+    clear: none;
+    padding: 1px;
+    margin-right: 25px;
+}
+.sapUiSizeCompact .sapMRbG .sapMRbBLabel {
+    padding-left: 2rem;
+    font-weight: bold;
+}
+span#__page1-title-inner {
+    font-weight: bold;
+}
+label#__label22 {
+    padding-left: 1px;
+    padding-top: 2px;
+    /* padding-right: 1px; */
+}
+.sapMNLI-Details .sapMText.sapMNLI-Text {
+       display: inline-block;
+}
+.sapMNLB-Low {
+    background-color: #e5e5e5;
+}
+.sapMNLB-Bullet {
+    display:none;
+}
+.sapUiSizeCompact .sapMNLB-CloseButton .sapMBtnInner {
+   
+    display: none;
+}
+.size5 {
+	font-size : 2rem;
+}
+#spellcheckModal{
+	display:none;
+}
+/*.sapUiTableFirstRow .sapUiTableRowEven .sapUiTableTr{*/
+/*	height:auto !important;*/
+	
+/*}*/
+
+/*tr{*/
+/*	height:auto  !important;*/
+/*}*/
+
+td
+{
+	height:auto  !important;
+}
+	
+.sapUiTableTDDummy {
+	display:none;
+}
+.noSuggestions {
+	color:green;
+	padding-top: 5px;
+    font-weight: bold;
+}
+.sapUiTableColSortedD::after {
+    display:none;
+}
+.sapMITBContent {
+    padding: 0.5rem 2rem ;
+}
+.sapUiTableCnt {
+    margin-top: 0.5rem;
+}
+.sapMTB {
+    border: 0px ;
+}
+.noBorder{
+border:none !important;
+ 
+}
+.sapMListTblCell{
+   vertical-align: middle !important; 
+}
+.sapMSltLabel {
+    
+    font-weight: normal;
+}
+.sapUiFormM .sapUiFormContainerTitle>.sapUiFormTitle{
+	height : 0rem;
+}/* Enter your custom styles here */

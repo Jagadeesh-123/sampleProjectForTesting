@@ -1,0 +1,15 @@
+[{
+	"inputs": {
+		"valueHelpInputs": [
+			"clientnumbermultiInput",
+			"businessPartnerNumber",
+			"matterInput",
+			"groupBillIdInput",
+			"billingOfficeInput",
+			"draftBillNoInput",
+			"salesOrgInput",
+			"finalBillNoInput"
+		],
+		"normal": ["fromDateInput","toDateInput"]
+	}
+}]

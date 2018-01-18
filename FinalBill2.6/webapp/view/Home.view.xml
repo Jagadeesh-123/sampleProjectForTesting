@@ -1,0 +1,723 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" controllerName="zprs.finalbill.controller.Home"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.ui.table" xmlns:msc="zprs.finalbill.control">
+	<html:style>
+		.exPageVariantPadding { padding-left: 2rem; }
+	</html:style>
+	<m:Page title="{i18n>title}">
+		<m:content>
+			<msc:IconTabBar expanded="true" visible="{MatterModel>/settings/isTabControlPanel}" id="idIconTabBar" select="handleIconTabBarSelect"
+				class="sapUiResponsiveContentPadding">
+				<msc:items>
+					<m:IconTabFilter id="iconTabBarFilter1" text="{i18n>headerEdits}" key="tab1" icon="sap-icon://write-new-document"
+						tooltip="{i18n>headerEdits}">
+						<Table id="HeaderEditTable" rows="{path : 'MatterModel>/MatterDetails/results'}" columnFreeze="true" rowSelectionChange="HeaderUpdate"
+							selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title">
+							<toolbar>
+								<m:Toolbar>
+									<m:content>
+										<m:Title id="title" text="{MatterModel>/settings/tableHeadResults} Results"/>
+										<m:ToolbarSpacer/>
+										<m:SearchField id="herSearch" app:key="header" placeholder="{i18n>Search}" value="{ui>/globalFilter}" liveChange="filterGlobally"
+											width="15rem"/>
+										<m:Button type="Accept" icon="sap-icon://download" tooltip="clear selection" press="downloadfile"/>
+									</m:content>
+								</m:Toolbar>
+							</toolbar>
+							<columns >
+								<Column width="4rem">
+									<m:Label text="{i18n>Info}"/>
+									<template>
+										<core:Icon tooltip="{MatterModel>info}" visible="{MatterModel>msg}" src="{MatterModel>src}" class="size5" color="{MatterModel>color}">
+											<core:layoutData>
+												<m:FlexItemData growFactor="1"/>
+											</core:layoutData>
+										</core:Icon>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Finalbill}"/>
+									<template>
+										<m:Text text="{MatterModel>Finalbill}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Draftbill}"/>
+									<template>
+										<m:Text text="{MatterModel>Draftbill}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>FiscalInvoiceNumber}"/>
+									<template>
+										<m:Text text="{MatterModel>Zzfiscalinv}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>InvoiceType}"/>
+									<template>
+										<m:Text text="{MatterModel>Fkart}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>ClientNumber}"/>
+									<template>
+										<m:Text text="{MatterModel>Client}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>ClientName}"/>
+									<template>
+										<m:Text text="{MatterModel>ClientName}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Player}"/>
+									<template>
+										<m:Text text="{MatterModel>Kunrg}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>MatterNumber}"/>
+									<template>
+										<m:Text text="{MatterModel>Pspid}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>MatterDiscription}"/>
+									<template>
+										<m:Text text="{MatterModel>Post1}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>LegalEntity}"/>
+									<template>
+										<m:Text text="{MatterModel>Vkorg}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BillingOffice}"/>
+									<template>
+										<m:Text text="{MatterModel>Werks}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Matter Reporting Group}"/>
+									<template>
+										<m:Text text="{MatterModel>Rptgroup}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>GroupBillingID}"/>
+									<template>
+										<m:Text text="{MatterModel>Mgbill}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BillingDate}"/>
+									<template>
+										<m:Text text="{MatterModel>Fkdat}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>CreatedOn}"/>
+									<template>
+										<m:Text text="{MatterModel>Erdat}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>CreatedBy}"/>
+									<template>
+										<m:Text text="{MatterModel>Ernam}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Currency}"/>
+									<template>
+										<m:Text text="{MatterModel>Waerk}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>NetFees}"/>
+									<template>
+										<m:Text text="{MatterModel>NetFees}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>NetDisbursements}"/>
+									<template>
+										<m:Text text="{MatterModel>NetCost}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Tax}"/>
+									<template>
+										<m:Text text="{MatterModel>Tax}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>DiscountAmount}"/>
+									<template>
+										<m:Text text="{MatterModel>DiscAmount}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>NetAmount}"/>
+									<template>
+										<m:Text text="{MatterModel>NetAmount}"/>
+									</template>
+								</Column>
+							</columns>
+						</Table>
+					</m:IconTabFilter>
+					<m:IconTabFilter id="iconTabBarFilter2" text="{i18n>LineItemEdits}" visible="{MatterModel>/settings/headerRowSelected}" key="tab2"
+						icon="sap-icon://edit" tooltip="{i18n>LineItemEdits}">
+						<Table id="lineTable" rows="{MatterModel>/Lineitems/results}" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title">
+							<toolbar>
+								<m:Toolbar>
+									<m:content>
+										<m:Title id="title2" text="{MatterModel>/settings/tableLineResults} Results"/>
+										<m:ToolbarSpacer/>
+										<m:SearchField id="lineSearch" app:key="line" placeholder="Search" value="{ui>/globalFilter}" liveChange="filterGlobally" width="15rem"/>
+										<m:Switch state="true" customTextOn="on" customTextOff="off" tooltip="enable select all items" change="onSwitchChange"/>
+										<m:Button type="Accept" icon="sap-icon://download" tooltip="clear selection" press="downloadfile"/>
+									</m:content>
+								</m:Toolbar>
+							</toolbar>
+							<columns >
+								<Column width="4rem">
+									<m:Label text="{i18n>Info}"/>
+									<template>
+										<core:Icon tooltip="{MatterModel>info}" visible="{MatterModel>msg}" src="{MatterModel>src}" class="size5" color="{MatterModel>color}">
+											<core:layoutData>
+												<m:FlexItemData growFactor="1"/>
+											</core:layoutData>
+										</core:Icon>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Rejcode}"/>
+									<template>
+										<m:Text text="{MatterModel>Abgru}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Reviewed}"/>
+									<template>
+										<m:Text text="{MatterModel>Zzreview}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>DraftBill}"/>
+									<template>
+										<m:Text text="{MatterModel>Vbeln}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Item}"/>
+									<template>
+										<m:Text text="{MatterModel>Posnr}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>PrintonInvoice}"/>
+									<template>
+										<m:Text text="{MatterModel>Zzprtoninv}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TypeofCreation}"/>
+									<template>
+										<m:Text text="{MatterModel>Zztranstyp}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TaxStatus}"/>
+									<template>
+										<m:Text text="{MatterModel>Taxm1}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>MatterPhase}"/>
+									<template>
+										<m:Text text="{MatterModel>Phase}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>DocumentNo}"/>
+									<template>
+										<m:Text text="{MatterModel>Belnr}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Lineitem}"/>
+									<template>
+										<m:Text text="{MatterModel>Buzei}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Working Office}"/>
+									<template>
+										<m:Text text="{MatterModel>Zzwerks}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Office}"/>
+									<template>
+										<m:Text text="{MatterModel>Werks}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>WorkDate}"/>
+									<template>
+										<m:Text text="{MatterModel>Budat}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TimekeeperNo}"/>
+									<template>
+										<m:Text text="{MatterModel>Pernr}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Timekeeper}"/>
+									<template>
+										<m:Text text="{MatterModel>Timekeeper}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Title}"/>
+									<template>
+										<m:Text text="{MatterModel>Ptext}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TransType}"/>
+									<template>
+										<m:Text text="{MatterModel>Awtyp}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TransCode}"/>
+									<template>
+										<m:Text text="{MatterModel>Lstar}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>TransDescription}"/>
+									<template>
+										<m:Text text="{MatterModel>LstarDesc}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>UOM}"/>
+									<template>
+										<m:Text text="{MatterModel>Meinh}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Currency}"/>
+									<template>
+										<m:Text text="{MatterModel>Waers}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BaseRate}"/>
+									<template>
+										<m:Text text="{MatterModel>BaseRate}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BillRate}"/>
+									<template>
+										<m:Text text="{MatterModel>ActualRate}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BaseVal}"/>
+									<template>
+										<m:Text text="{MatterModel>BaseValue}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BillValue}"/>
+									<template>
+										<m:Text text="{MatterModel>ActualValue}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>WorkedQty}"/>
+									<template>
+										<m:Text text="{MatterModel>BaseQty}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>BillQty}"/>
+									<template>
+										<m:Text text="{MatterModel>ActualQty}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>WriteUp/Down}"/>
+									<template>
+										<m:Text text="{MatterModel>ZwriteoffAmt}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>WriteDownQty}"/>
+									<template>
+										<m:Text text="{MatterModel>ZwriteoffQty}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>VATonIOB}"/>
+									<template>
+										<m:Text text="{MatterModel>Kzwi6}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>FeeMarkup}"/>
+									<template>
+										<m:Text text="{MatterModel>Kzwi5}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Discount}"/>
+									<template>
+										<m:Text text="{MatterModel>Kzwi4}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>NetVal}"/>
+									<template>
+										<m:Text text="{MatterModel>NetBillValue}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Taxamount}"/>
+									<template>
+										<m:Text text="{MatterModel>Tax}"/>
+									</template>
+								</Column>
+								<Column width="11rem">
+									<m:Label text="{i18n>Office}"/>
+									<template>
+										<m:Text text="{MatterModel>Werks}"/>
+									</template>
+								</Column>
+							</columns>
+						</Table>
+					</m:IconTabFilter>
+					<m:IconTabFilter id="iconTabBarFilter3" text="{i18n>BillSummary}" visible="{MatterModel>/settings/headerRowSelected}" key="tab3"
+						icon="sap-icon://edit-outside" tooltip="{i18n>BillSummary}">
+						<l:Grid defaultSpan="L3 M4 S6" class="sapUiSmallMarginTop">
+							<l:content>
+								<m:VBox>
+									<m:layoutData>
+										<l:GridData span="L4 M4 S4" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</m:layoutData>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Draft Bill :" info="{MatterModel>Draftbill}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Matter :" info="{MatterModel>Pspid}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Currency :" info="{MatterModel>Waerk}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Billing Office :" info="{MatterModel>Werks}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Client No/Name :" info="{MatterModel>Client} / {MatterModel>ClientName}" infoState="Success"
+											icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Payer No/Name and Address :" info="{MatterModel>Kunrg} / {MatterModel>PayerName}"
+											infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Matter Description :" info="{MatterModel>Post1}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Billing Partner :" info="{MatterModel>BaName}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Final Bill :" info="{MatterModel>Finalbill}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+									<m:List items="{path : 'MatterModel>/billSumarryRow'}">
+										<m:StandardListItem class="myListTheme" title="Credit Amount Description :" info="{MatterModel>ZzcreditamtDesc}" infoState="Success" icon=""></m:StandardListItem>
+									</m:List>
+								</m:VBox>
+								<Table id="HeaderEditTable_billSummary" rows="{path : 'MatterModel>/matterSummaryList/results'}" columnFreeze="true"
+									cellClick="HeaderUpdate" firstVisibleRowChanged="updateHeaderChange" selectionMode="MultiToggle" visibleRowCount="7 " ariaLabelledBy="title">
+									<layoutData>
+										<l:GridData span="L8 M8 S8" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</layoutData>
+									<columns >
+										<Column width="8rem">
+											<m:Label text="Trans Type"/>
+											<template>
+												<m:Text text="{MatterModel>Vtext}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="%Val"/>
+											<template>
+												<m:Text text="{MatterModel>PercentValue}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Fee"/>
+											<template>
+												<m:Text text="{MatterModel>FeeValue}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Soft Copy"/>
+											<template>
+												<m:Text text="{MatterModel>ScValue}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Hard Copy"/>
+											<template>
+												<m:Text text="{MatterModel>HcValue}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Total"/>
+											<template>
+												<m:Text text="{MatterModel>Total}"/>
+											</template>
+										</Column>
+									</columns>
+								</Table>
+							</l:content>
+							<l:content>
+								<m:VBox>
+									<m:layoutData>
+										<l:GridData span="L4 M4 S4" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</m:layoutData>
+								</m:VBox>
+								<Table id="totalTable" rows="{path : 'MatterModel>/billSummaryTotalTable'}" columnFreeze="true" cellClick="HeaderUpdate"
+									firstVisibleRowChanged="updateHeaderChange" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title">
+									<layoutData>
+										<l:GridData span="L8 M8 S8" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</layoutData>
+									<columns >
+										<Column width="9rem">
+											<m:Label text="Total"/>
+											<template>
+												<m:Text text="{MatterModel>key}"/>
+											</template>
+										</Column>
+										<Column width="9rem">
+											<m:Label text=""/>
+											<template>
+												<m:Text text="{MatterModel>Zzfundsamt}"/>
+											</template>
+										</Column>
+										<Column width="9rem">
+											<m:Label text=""/>
+											<template>
+												<m:Text text="{MatterModel>Zzcreditamt}"/>
+											</template>
+										</Column>
+										<Column width="9rem">
+											<m:Label text=""/>
+											<template>
+												<m:Text text="{MatterModel>ZzcreditTax}"/>
+											</template>
+										</Column>
+										<Column width="9rem">
+											<m:Label text=""/>
+											<template>
+												<m:Text text="{MatterModel>ZzcreditTax}"/>
+											</template>
+										</Column>
+										<Column width="9rem">
+											<m:Label text="{MatterModel>/totalLable}"/>
+											<template>
+												<m:Text text="{MatterModel>val}"/>
+											</template>
+										</Column>
+									</columns>
+								</Table>
+								<Table id="discountTable" rows="{path : 'MatterModel>/matterSummaryList/results'}" columnFreeze="true" cellClick="HeaderUpdate"
+									firstVisibleRowChanged="updateHeaderChange" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title"
+									title="Discount/Surcharge Breakdown">
+									<layoutData>
+										<l:GridData span="L12 M12 S12" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</layoutData>
+									<columns >
+										<Column width="13rem">
+											<m:Label text="Trans Type"/>
+											<template>
+												<m:Text text="{MatterModel>Vtext}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="% Val"/>
+											<template>
+												<m:Text text="{MatterModel>PercentValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Fee"/>
+											<template>
+												<m:Text text="{MatterModel>FeeValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Soft Copy"/>
+											<template>
+												<m:Text text="{MatterModel>ScValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Hard Copy"/>
+											<template>
+												<m:Text text="{MatterModel>HcValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Total"/>
+											<template>
+												<m:Text text="{MatterModel>Total}"/>
+											</template>
+										</Column>
+									</columns>
+								</Table>
+								<Table id="statisticalTable" rows="{path : 'MatterModel>/matterSummaryList/results'}" columnFreeze="true" cellClick="HeaderUpdate"
+									firstVisibleRowChanged="updateHeaderChange" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title" title="Statistical Value">
+									<layoutData>
+										<l:GridData span="L12 M12 S12" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</layoutData>
+									<columns >
+										<Column width="13rem">
+											<m:Label text="Trans Type"/>
+											<template>
+												<m:Text text="{MatterModel>Vtext}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="% Val"/>
+											<template>
+												<m:Text text="{MatterModel>PercentValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Fee"/>
+											<template>
+												<m:Text text="{MatterModel>FeeValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Soft Copy"/>
+											<template>
+												<m:Text text="{MatterModel>ScValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Hard Copy"/>
+											<template>
+												<m:Text text="{MatterModel>HcValue}"/>
+											</template>
+										</Column>
+										<Column width="13rem">
+											<m:Label text="Total"/>
+											<template>
+												<m:Text text="{MatterModel>Total}"/>
+											</template>
+										</Column>
+									</columns>
+								</Table>
+								<Table id="timeKeeperTable" rows="{path : 'MatterModel>/matterEditSummaryList/results'}" columnFreeze="true" cellClick="HeaderUpdate"
+									firstVisibleRowChanged="updateHeaderChange" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title" title="">
+									<layoutData>
+										<l:GridData span="L12 M12 S12" linebreakL="false" linebreakM="false" linebreakS="false"/>
+									</layoutData>
+									<columns >
+										<Column width="8rem">
+											<m:Label text="Timekeeper No"/>
+											<template>
+												<m:Text text="{MatterModel>Pernr}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Timekeeper"/>
+											<template>
+												<m:Text text="{MatterModel>Sname}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Discription"/>
+											<template>
+												<m:Text text="{MatterModel>ZzactKltxt}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Activity Type"/>
+											<template>
+												<m:Text text="{MatterModel>ActualRate}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Base Rate"/>
+											<template>
+												<m:Text text="{MatterModel>BaseRate}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Worked Qty"/>
+											<template>
+												<m:Text text="{MatterModel>BaseQty}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Base Amount"/>
+											<template>
+												<m:Text text="{MatterModel>BaseAmount}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Bill Rate"/>
+											<template>
+												<m:Text text="{MatterModel>ActualRate}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Bill Qty"/>
+											<template>
+												<m:Text text="{MatterModel>ActualQty}"/>
+											</template>
+										</Column>
+										<Column width="8rem">
+											<m:Label text="Bill Amount"/>
+											<template>
+												<m:Text text="{MatterModel>ActualAmount}"/>
+											</template>
+										</Column>
+									</columns>
+								</Table>
+							</l:content>
+						</l:Grid>
+					</m:IconTabFilter>
+				</msc:items>
+			</msc:IconTabBar>
+		</m:content>
+		<m:footer>
+			<m:Bar>
+				<m:contentLeft>
+					<m:Button icon="sap-icon://add-filter" press="openMasterDialog"/>
+				</m:contentLeft>
+				<m:contentRight>
+					<m:Button text="{i18n>CreateFinalBill}" type="Accept" visible="{MatterModel>/settings/header}" press="CreateFinalBill"/>
+					<m:Button text="{i18n>PrintFinalBill}" type="Accept" visible="{MatterModel>/settings/header}" press="PrintFinalBill"/>
+					<m:Button text="Save" type="Accept" visible="{MatterModel>/settings/headerline}" press="save"/>
+				</m:contentRight>
+			</m:Bar>
+		</m:footer>
+	</m:Page>
+</mvc:View>
